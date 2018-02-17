@@ -5,19 +5,26 @@ const Money = styled.div`
   color: {(props.color ? props.color : "#00bae8")};
   font-size: ${props => (props.popularDestinations ? "14px" : "16px")};
   line-height: 20px;
-  
+
+  cursor: pointer;
+
   @media (min-width: 768px) {
     font-size: 21px;
     line-height: 31px;
   }
+
   @media (min-width: 1200px) {
     font-size: ${props => (props.popularDestinations ? "22px" : "16px")};
     line-height: ${props => (props.popularDestinations ? "32px" : "20px")};
   }
+
 `;
 
 const Wording = styled.span`
   color: ${props => (props.color ? props.color : "#00bae8")};
+
+  &:hover {
+    color: ${props => (props.popularDestinations ? "inherit" : "#ff9d1b")};
 `;
 
 const FormatMoney = props => {

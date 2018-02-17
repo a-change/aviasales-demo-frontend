@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Geo from "./geo";
 import Money from "./money";
+
 const Card = styled.div`
   border-radius: 8px;
   background: white;
@@ -15,6 +16,7 @@ const Card = styled.div`
     margin-bottom: 32px;
   }
 `;
+
 const Info = styled.div`
   display: flex;
   justify-content: space-between;
@@ -44,19 +46,36 @@ const Image = styled.img`
   width: 100%;
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
+  height: 176px;
+  object-fit: cover;
+
+  @media (min-width: 768px) {
+    height: 212px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 212px;
+  }
+`;
+
+const Link = styled.a`
+  border-radius: inherit;
+  text-decoration: none;
 `;
 
 export default props => {
   return (
     <Card>
-      <Image src={props.destination.img} alt={props.destination.city} />
-      <Info>
-        <Geo destination={props.destination} popularDestinations />
-        <Price>
-          <Money popularDestinations price={props.destination.bestPrice} />
-          <TheDate>{props.destination.date}</TheDate>
-        </Price>
-      </Info>
+      <Link href="#">
+        <Image src={props.destination.img} alt={props.destination.city} />
+        <Info>
+          <Geo destination={props.destination} popularDestinations />
+          <Price>
+            <Money popularDestinations price={props.destination.bestPrice} />
+            <TheDate>{props.destination.date}</TheDate>
+          </Price>
+        </Info>
+      </Link>
     </Card>
   );
 };

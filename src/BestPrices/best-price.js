@@ -20,19 +20,34 @@ const PricesList = styled.div`
   padding-top: 24px;
 `;
 
-const PriceRow = styled.div`
+const PriceRow = styled.a`
   display: flex;
   justify-content: space-between;
+
   margin-bottom: 16px;
   font-size: 16px;
   line-height: 20px;
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+`;
+
+const DepartureCity = styled.span`
+  cursor: pointer;
+
+  &:hover {
+    color: #ff9d1b;
+    text-decoration: underline;
+  }
 `;
 
 export default props => {
   var listPrices = props.destination.prices.map(function(price, key) {
     return (
-      <PriceRow key={price.name}>
-        <span>Из {price.from}</span>
+      <PriceRow key={price.name} href="#">
+        <DepartureCity>Из {price.from}</DepartureCity>
         <Money price={price.price} />
       </PriceRow>
     );

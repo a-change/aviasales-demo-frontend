@@ -91,6 +91,14 @@ const Button = styled.button`
   font-size: 16px;
   line-height: 20px;
   color: #d93533;
+
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #d93533;
+    color: #ffffff;
+  }
 `;
 
 export default props => {

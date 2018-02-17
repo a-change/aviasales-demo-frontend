@@ -6,19 +6,29 @@ const Geo = styled.div`
   display: flex;
 `;
 
+const Info = styled.div`
+  flex-grow: 1;
+  min-width: 0;
+`;
+
 const City = styled.h3`
   margin: 0px;
 
   color: #5b5b5c;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 21px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media (min-width: 768px) {
     font-size: 21px;
     line-height: 31px;
   }
 `;
+
 const Country = styled.div`
   text-transform: uppercase;
   font-size: 12px;
@@ -48,10 +58,10 @@ export default props => {
         alt={props.destination.country}
         popularDestinations={props.popularDestinations}
       />
-      <div>
+      <Info>
         <City>{props.destination.city}</City>
         <Country>{props.destination.country}</Country>
-      </div>
+      </Info>
     </Geo>
   );
 };
