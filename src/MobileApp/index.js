@@ -6,10 +6,12 @@ import phone from "./phone.png";
 import iphone from "./iphone.svg";
 import android from "./android.svg";
 import wp from "./wp.svg";
+
 const MobileApp = styled.section`
   background: linear-gradient(#00b0de, #196ebd);
   padding-top: 24px;
   color: white;
+
   @media (min-width: 768px) {
     padding-top: 45px;
   }
@@ -21,9 +23,11 @@ const Title = styled.h3`
   font-weight: normal;
   text-align: center;
   margin: 0px;
+
   @media (min-width: 768px) {
     text-align: left;
   }
+
   @media (min-width: 1200px) {
     font-size: 32px;
     line-height: 40px;
@@ -33,9 +37,11 @@ const Title = styled.h3`
 const Rating = styled.div`
   font-size: 14px;
   line-height: 20px;
+
   margin-top: 19px;
   display: flex;
   justify-content: center;
+
   @media (min-width: 768px) {
     justify-content: flex-start;
   }
@@ -56,6 +62,7 @@ const Apps = styled.div`
 const Phone = styled.img`
   width: 162px;
   height: 213px;
+
   @media (min-width: 768px) {
     width: 237px;
     height: 312px;
@@ -63,6 +70,7 @@ const Phone = styled.img`
     bottom: 0px;
     left: 0px;
   }
+
   @media (min-width: 1200px) {
     left: 100px;
   }
@@ -74,6 +82,7 @@ const PhoneTypes = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin-left: 15px;
+
   @media (min-width: 768px) {
     flex-flow: row;
     justify-content: space-between;
@@ -82,6 +91,7 @@ const PhoneTypes = styled.div`
     padding-bottom: 54px;
     padding-top: 40px;
   }
+
   @media (min-width: 1200px) {
     justify-content: flex-start;
   }
@@ -90,10 +100,12 @@ const PhoneTypes = styled.div`
 const PhoneType = styled.p`
   display: flex;
   align-items: center;
+
   @media (min-width: 768px) {
     border-right: ${props => (props.noBorder ? "none" : "1px solid white")};
     padding-right: 20px;
   }
+
   @media (min-width: 1200px) {
     padding-left: ${props => (props.noPadding ? "0px" : "20px")};
   }

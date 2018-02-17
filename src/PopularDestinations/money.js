@@ -5,6 +5,7 @@ const Money = styled.div`
   color: {(props.color ? props.color : "#00bae8")};
   font-size: ${props => (props.popularDestinations ? "14px" : "16px")};
   line-height: 20px;
+  
   @media (min-width: 768px) {
     font-size: 21px;
     line-height: 31px;
@@ -16,18 +17,19 @@ const Money = styled.div`
 `;
 
 const Wording = styled.span`
-font-size: {(props.color ? props.color : "#00bae8")}; 
+  color: ${props => (props.color ? props.color : "#00bae8")};
 `;
 
-export default props => {
+const FormatMoney = props => {
   let price = props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   return (
     <Money>
       <Wording>
         {props => (props.popularDestinations ? "Найти " : "")}
-        от
-      </Wording>{" "}
-      {price} ₽
+        от {price} ₽
+      </Wording>
     </Money>
   );
 };
+
+export default FormatMoney;

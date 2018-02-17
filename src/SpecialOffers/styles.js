@@ -22,8 +22,4 @@ export const Note = styled.div`
   text-align: center;
 `;
 
-export const Link = styled.a`
-  &:visited: {
-    color: black;
-  }
-`;
+export const Link = styled.a``;

@@ -8,27 +8,33 @@ const Help = styled.section`
   padding-top: 20px;
   padding-bottom: 24px;
 `;
+
 const Title = styled.div`
   display: flex;
 `;
+
 const Text = styled.h3`
   text-transform: uppercase;
   margin: 0px;
   font-size: 13px;
   line-heigth: 18px;
 `;
+
 const Logo = styled.img`
   margin-right: 10px;
 `;
+
 const Body = styled.div`
   color: #4a4a4a;
   font-size: 14px;
   line-height: 20px;
   padding-bottom: 16px;
 `;
+
 const Link = styled.a`
   color: #00ace2;
 `;
+
 export default function() {
   return (
     <Help>

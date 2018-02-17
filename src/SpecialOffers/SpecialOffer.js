@@ -7,9 +7,11 @@ const SpecialOffer = styled.div`
 
 const Title = styled.div`
   background-color: #cd2027;
+
   padding: 22px 16px 22px 16px;
   display: flex;
   justify-content: space-between;
+
   @media (min-width: 768px) {
     padding-right: 6px;
   }
@@ -46,10 +48,12 @@ const Money = styled.span`
 const Image = styled.img`
   width: 122px;
   height: 30px;
+
   @media (min-width: 768px) {
     width: 100px;
     height: 25px;
   }
+
   @media (min-width: 1200px) {
     width: 120px;
     height: 30px;
@@ -75,15 +79,18 @@ const Note = styled.aside`
 `;
 
 const Button = styled.button`
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-size: 16px;
-  line-height: 20px;
-  color: #d93533;
+  width: 100%;
+
   background-color: inherit;
   border: 2px solid #cd1f27;
   border-radius: 3px;
-  width: 100%;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: #d93533;
 `;
 
 export default props => {

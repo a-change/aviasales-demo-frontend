@@ -6,9 +6,11 @@ const Card = styled.div`
   border-radius: 8px;
   background: white;
   margin-bottom: 12px;
+
   @media (min-width: 768px) {
     margin-bottom: 25px;
   }
+
   @media (min-width: 1200px) {
     margin-bottom: 32px;
   }
@@ -18,9 +20,11 @@ const Info = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px 12px 18px;
+
   @media (min-width: 768px) {
     padding: 12px 16px 16px 17px;
   }
+
   @media (min-width: 1200px) {
     padding: 12px 24px 16px 14px;
   }

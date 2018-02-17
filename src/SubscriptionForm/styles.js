@@ -3,10 +3,12 @@ import border from "./border.png";
 
 export const SubscriptionForm = styled.div`
   display: none;
+
   @media (min-width: 768px) {
     display: block;
     padding-top: 25px;
   }
+
   @media (min-width: 1200px) {
     margin-bottom: 32px;
   }
@@ -44,6 +46,7 @@ export const Socials = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
   @media (min-width: 1200px) {
     margin-top: 0px;
     display: flex;
@@ -54,6 +57,7 @@ export const SubscriptionElements = styled.div`
   @media (min-width: 768px) {
     display: block;
   }
+
   @media (min-width: 1200px) {
     display: flex;
   }

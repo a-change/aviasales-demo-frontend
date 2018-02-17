@@ -28,9 +28,9 @@ export default function() {
   return (
     <Footer>
       <SiteLinks>
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-6 col-md-3 col-xl-2">
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-6 col-md-3 col-xl-2">
               <Title>Cтраны</Title>
               <Text href="#">Россия</Text>
               <Text href="#">Таиланд</Text>
@@ -40,7 +40,7 @@ export default function() {
               <Text href="#">Грузия</Text>
               <Bottom href="#">Все страны</Bottom>
             </div>
-            <div class="col-xs-6 col-md-3 col-xl-2">
+            <div className="col-xs-6 col-md-3 col-xl-2">
               <Title>Города</Title>
               <Text href="#">Москва</Text>
               <Text href="#">Санкт-Петербург</Text>
@@ -50,7 +50,7 @@ export default function() {
               <Text href="#">Лондон</Text>
               <Bottom href="#">Все города</Bottom>
             </div>
-            <div class="col-xs-6 col-md-3 col-xl-2">
+            <div className="col-xs-6 col-md-3 col-xl-2">
               <Title>Авиакомпании</Title>
               <Text href="#">Air Berlin</Text>
               <Text href="#">Air France</Text>
@@ -60,7 +60,7 @@ export default function() {
               <Text href="#">KLM</Text>
               <Bottom href="#">Все авиакомпании</Bottom>
             </div>
-            <div class="col-xs-6 col-md-3 col-xl-2">
+            <div className="col-xs-6 col-md-3 col-xl-2">
               <Title>Аэропорты</Title>
               <Text href="#">Шереметьево</Text>
               <Text href="#">Курумоч</Text>
@@ -70,7 +70,7 @@ export default function() {
               <Text href="#">Гамбург</Text>
               <Bottom href="#">Все аэропорты</Bottom>
             </div>
-            <div class="col-xs-6 col-md-3 col-xl-2">
+            <div className="col-xs-6 col-md-3 col-xl-2">
               <Title>Направления</Title>
               <Text href="#">MOW – SIP</Text>
               <Text href="#">MOW – AER</Text>
@@ -79,7 +79,7 @@ export default function() {
               <Text href="#">LED – MOW</Text>
               <Text href="#">MOW – BKK</Text>
             </div>
-            <div class="col-xs-6 col-md-3 col-xl-2">
+            <div className="col-xs-6 col-md-3 col-xl-2">
               <Title>Сервисы</Title>
               <Text href="#">Горящие авиабилеты</Text>
               <Text href="#">Календарь низких цен</Text>
@@ -92,12 +92,12 @@ export default function() {
           </div>
         </div>
       </SiteLinks>
-      <div class="container">
-        <div class="row">
+      <div className="container">
+        <div className="row">
           <FooterEnd>
-            <div class="col-xs-12 col-md-12 col-xl-10">
-              <div class="row">
-                <div class="col-xs-12 col-md-12 col-xl-10">
+            <div className="col-xs-12 col-md-12 col-xl-10">
+              <div className="row">
+                <div className="col-xs-12 col-md-12 col-xl-10">
                   <AdditionalInfo>
                     <InlineText href="#">О компании</InlineText>
                     <InlineText href="#">Партнерская программа</InlineText>
@@ -109,8 +109,8 @@ export default function() {
                   </AdditionalInfo>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-xs-12 col-md-12 col-xl-9">
+              <div className="row">
+                <div className="col-xs-12 col-md-12 col-xl-9">
                   <SocialLinks>
                     <SocialLink href="#">
                       <img src={vk} alt="" /> Вконтакте
@@ -132,8 +132,8 @@ export default function() {
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-xs-12 col-md-12 col-xl-6">
+              <div className="row">
+                <div className="col-xs-12 col-md-12 col-xl-6">
                   <RentingHotels>
                     <InlineText href="#">
                       Поиск и бронирование отелей
@@ -142,7 +142,7 @@ export default function() {
                 </div>
               </div>
             </div>
-            <div class="col-xs-12 col-md-12 col-xl-4">
+            <div className="col-xs-12 col-md-12 col-xl-4">
               <AppStores>
                 <AppStoreImage src={appStore} />
                 <AppStoreImage src={googlePlay} />

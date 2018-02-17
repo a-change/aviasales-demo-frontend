@@ -8,10 +8,12 @@ const Geo = styled.div`
 
 const City = styled.h3`
   margin: 0px;
+
   color: #5b5b5c;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
+
   @media (min-width: 768px) {
     font-size: 21px;
     line-height: 31px;
@@ -22,6 +24,7 @@ const Country = styled.div`
   font-size: 12px;
   line-height: 20px;
   color: #a0b0b9;
+
   @media (min-width: 768px) {
     display: flex;
   }
@@ -29,6 +32,7 @@ const Country = styled.div`
 
 const Flag = styled.img`
   display: ${props => (props.popularDestinations ? "none" : "block")};
+
   @media (min-width: 768px) {
     display: block;
     height: 46px;

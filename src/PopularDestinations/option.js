@@ -4,9 +4,11 @@ import styled from "styled-components";
 const Option = styled.button`
   background: none;
   border: none;
+
   font-size: 12px;
   line-height: 20px;
   text-transform: uppercase;
+
   margin-top: 12px;
   padding-left: 0px;
   padding-right: 0px;
@@ -18,11 +20,13 @@ const Icon = styled.img`
   height: 48px;
   width: 48px;
   padding: 13px;
+
   background: #ffffff;
   box-shadow: ${props =>
     props.isActive
       ? "0px 4px 16px rgba(74, 74, 74, 0.12)"
       : "0px 2px 4px rgba(74, 74, 74, 0.1)"};
+
   border-radius: 50px;
 `;
 
@@ -30,6 +34,7 @@ const Desc = styled.h3`
   padding: 0 6px;
   position: relative;
   margin: 12px 0px 0px 0px;
+
   font-weight: normal;
   font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   line-height: 20px;

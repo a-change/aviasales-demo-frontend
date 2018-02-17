@@ -4,8 +4,10 @@ import styled from "styled-components";
 const Social = styled.a`
   background-color: #979797;
   border-radius: 50%;
+
   height: 36px;
   width: 36px;
+
   display: flex;
   justify-content: center;
   align-items: center;

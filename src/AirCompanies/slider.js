@@ -9,7 +9,9 @@ import rightArrow from "./right-arrow.png";
 import leftArrow from "./left-arrow.png";
 import activeDot from "./dot-active.png";
 import dot from "./dot.png";
+
 const Slider = styled.div``;
+
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
@@ -20,19 +22,23 @@ const Images = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+
   @media (min-width: 768px) {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   @media (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 `;
+
 const Image = styled.img`
   margin-bottom: 32px;
+
   @media (min-width: 1200px) {
     margin-right: 20px;
     margin-bottom: 10px;
@@ -47,6 +53,7 @@ const RightArrow = styled.button`
   padding: 0;
   cursor: pointer;
 `;
+
 const LeftArrow = styled.button`
   border: none;
   background: url(${leftArrow}) center no-repeat;
@@ -60,6 +67,7 @@ const Controls = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
   @media (min-width: 1200px) {
     margin-top: 20px;
   }
