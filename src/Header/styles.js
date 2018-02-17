@@ -105,24 +105,12 @@ export const FormRow = styled.div`
   }
 `;
 
-export const InputWithIconWrapper = styled.div`
+export const InputWithIcon = styled.div`
   width: 100%;
   display: inline-flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-`;
-
-export const InputIconWrapper = styled.div`
-  position: absolute;
-  display: flex;
-  align-items: center;
-  color: #a0b0b9;
-`;
-
-export const InputIcon = styled.img`
-  margin-right: 16px;
-  margin-left: 11px;
 `;
 
 export const DepartureCity = styled.input`

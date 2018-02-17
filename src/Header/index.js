@@ -11,9 +11,7 @@ import {
   Note,
   SearchTicketsForm,
   FormRow,
-  InputWithIconWrapper,
-  InputIconWrapper,
-  InputIcon,
+  InputWithIcon,
   DepartureCity,
   ArrivalCity,
   DepartureDate,
@@ -23,6 +21,7 @@ import {
   TicketPriceCategory,
   FindTickets
 } from "./styles";
+import InputIcon from "./input-icon";
 
 export default function() {
   return (
@@ -35,33 +34,26 @@ export default function() {
       <Note>Лучший способ купить авиабилеты дешево</Note>
       <SearchTicketsForm>
         <FormRow>
-          <InputWithIconWrapper>
+          <InputWithIcon>
             <DepartureCity
               type="text"
               placeholder="Город отправления"
               value="Москва"
             />
-            <InputIconWrapper>
-              MOW
-              <InputIcon alt="Поменять город" src={arrow} />
-            </InputIconWrapper>
-          </InputWithIconWrapper>
+            <InputIcon alt="Поменять город" img={arrow} text="MOW" />
+          </InputWithIcon>
           <ArrivalCity type="text" placeholder="Город прибытия" />
         </FormRow>
         <FormRow>
           <TravelDates>
-            <InputWithIconWrapper>
+            <InputWithIcon>
               <DepartureDate type="text" placeholder="Туда" />
-              <InputIconWrapper>
-                <InputIcon alt="arrow" src={calendar} />
-              </InputIconWrapper>
-            </InputWithIconWrapper>
-            <InputWithIconWrapper>
+              <InputIcon alt="arrow" img={calendar} />
+            </InputWithIcon>
+            <InputWithIcon>
               <ReturnDate placeholder="Обратно" />
-              <InputIconWrapper>
-                <InputIcon alt="arrow" src={calendar} />
-              </InputIconWrapper>
-            </InputWithIconWrapper>
+              <InputIcon alt="arrow" img={calendar} />
+            </InputWithIcon>
           </TravelDates>
           <PassengerNumberSelect>
             1 пассажир, <TicketPriceCategory>эконом</TicketPriceCategory>
