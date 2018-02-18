@@ -31,7 +31,8 @@ export const destinations = {
     country: "Россия",
     flag: flagRu,
     bestPrice: 1212,
-    date: "18 марта"
+    date: "18 марта",
+    categories: ["popularDestinations"]
   },
   sochi: {
     img: sochi,
@@ -39,7 +40,8 @@ export const destinations = {
     country: "Россия",
     flag: flagRu,
     bestPrice: 1334,
-    date: "27 марта"
+    date: "27 марта",
+    categories: ["popularDestinations"]
   },
   piter: {
     img: piter,
@@ -47,7 +49,8 @@ export const destinations = {
     country: "Россия",
     flag: flagRu,
     bestPrice: 1508,
-    date: "19 февраля"
+    date: "19 февраля",
+    categories: ["popularDestinations"]
   },
   minVody: {
     img: minVody,
@@ -55,7 +58,8 @@ export const destinations = {
     country: "Россия",
     flag: flagRu,
     bestPrice: 2074,
-    date: "13 марта"
+    date: "13 марта",
+    categories: ["popularDestinations"]
   },
   simferopol: {
     img: simferopol,
@@ -64,6 +68,7 @@ export const destinations = {
     flag: flagRu,
     bestPrice: 2407,
     date: "13 марта",
+    categories: ["popularDestinations", "bestPrices"],
     prices: [
       {
         name: "Moscow",
@@ -98,12 +103,14 @@ export const destinations = {
     country: "Испания",
     flag: flagEsp,
     bestPrice: 4247,
-    date: "24 марта"
+    date: "24 марта",
+    categories: ["popularDestinations"]
   },
   erevan: {
     city: "Ереван",
     country: "Армения",
     flag: flagAm,
+    categories: ["bestPrices"],
     prices: [
       {
         name: "Moscow",
@@ -136,6 +143,7 @@ export const destinations = {
     city: "Кишинев",
     country: "Молдавия",
     flag: flagMd,
+    categories: ["bestPrices"],
     prices: [
       {
         name: "Moscow",

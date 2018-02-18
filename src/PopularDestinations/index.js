@@ -20,7 +20,7 @@ export default function() {
         <div className="row">
           <div className="col-xs-12 col-md-10 col-md-offset-1">
             <div className="row center-xs">
-              <div className="col-xs-12 col-md-8">
+              <div className="col-xs-12 col-md-11 col-xl-9">
                 <img alt="Популярные направления" src={compass} />
                 <Title>
                   <Text>
@@ -32,49 +32,42 @@ export default function() {
                 </Title>
               </div>
             </div>
-            <div className="row center-xs">
-              <div className="col-xs-4 col-md-2 col-xl-1 ">
-                <Option option={options.anywhere} isActive />
-              </div>
-              <div className="col-xs-4 col-md-2 col-xl-1">
-                <Option option={options.sun} />
-              </div>
-              <div className="col-xs-4 col-md-2 col-xl-1">
-                <Option option={options.shopping} />
-              </div>
-              <div className="col-xs-4 col-md-2 col-xl-1">
-                <Option option={options.culture} />
-              </div>
-              <div className="col-xs-4 col-md-2 col-xl-1">
-                <Option option={options.nightLife} />
-              </div>
-              <div className="col-xs-4 col-md-2 col-xl-1">
-                <Option option={options.withKids} />
+            <div className="row center-xs center-xl">
+              <div className="col-xl-8">
+                <div class="row">
+                  {Object.keys(options).map(function(option, index) {
+                    let isActive = false;
+                    if (index === 0) {
+                      isActive = true;
+                    }
+                    return (
+                      <div className="col-xs-4 col-md-2 col-xl-2" key={index}>
+                        <Option option={options[option]} isActive={isActive} />
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
             <Destinations>
               <div className="row center-md">
-                <div className="col-xs-12 col-md-12 col-xl-6">
-                  <Destination
-                    destination={destinations.krasnodar}
-                    popularDestinations
-                  />
-                </div>
-                <div className="col-xs-12 col-md-12 col-xl-6">
-                  <Destination destination={destinations.sochi} />
-                </div>
-                <div className="col-xs-12 col-md-12 col-xl-6">
-                  <Destination destination={destinations.piter} />
-                </div>
-                <div className="col-xs-12 col-md-12 col-xl-6">
-                  <Destination destination={destinations.minVody} />
-                </div>
-                <div className="col-xs-12 col-md-12 col-xl-6">
-                  <Destination destination={destinations.simferopol} />
-                </div>
-                <div className="col-xs-12 col-md-12 col-xl-6">
-                  <Destination destination={destinations.barcelona} />
-                </div>
+                {Object.keys(destinations).map(function(destination, index) {
+                  if (
+                    destinations[destination].categories.indexOf(
+                      "popularDestinations"
+                    ) === -1
+                  ) {
+                    return null;
+                  }
+                  return (
+                    <div className="col-xs-12 col-md-12 col-xl-6" key={index}>
+                      <Destination
+                        destination={destinations[destination]}
+                        popularDestinations
+                      />
+                    </div>
+                  );
+                })}
               </div>
             </Destinations>
           </div>

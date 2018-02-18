@@ -1,21 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const Option = styled.button`
-  background: none;
-  border: none;
-
-  font-size: 12px;
-  line-height: 20px;
-  text-transform: uppercase;
-
-  margin-top: 12px;
-  padding-left: 0px;
-  padding-right: 0px;
-
-  border-bottom: ${props => (props.isActive ? "1px solid #00ACE2;" : "none")};
-`;
-
 const Icon = styled.img`
   height: 48px;
   width: 48px;
@@ -42,6 +27,36 @@ const Desc = styled.h3`
   text-transform: uppercase;
   text-align: center;
   color: ${props => (props.isActive ? "#5c5c5c" : "#00ace2")};
+`;
+
+const Option = styled.button`
+  background: none;
+  border: none;
+
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  margin-top: 12px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  cursor: pointer;
+
+  border-bottom: ${props => (props.isActive ? "1px solid #00ACE2;" : "none")};
+
+  &:hover {
+    transition: all 0.2s ease;
+    color: #ff8b00;
+  }
+
+  &:hover ${Desc} {
+    color: #ff8b00;
+  }
+
+  &:hover ${Icon} {
+    transform: translateY(-5px);
+  }
 `;
 
 export default props => {

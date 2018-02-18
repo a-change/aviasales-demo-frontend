@@ -123,12 +123,10 @@ export const InputWithIcon = styled.div`
   justify-content: flex-end;
 `;
 
-export const DepartureCity = styled.input`
+const Input = styled.input`
   width: 100%;
   outline: none;
   border: none;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
 
   padding: 18px 0px 18px 16px;
   margin-bottom: 2px;
@@ -136,9 +134,20 @@ export const DepartureCity = styled.input`
   line-height: 20px;
   font-size: 16px;
 
+  transition: all 0.3s;
+
   ::placeholder: {
     color: #a0b0b9;
   }
+
+  &:focus {
+    box-shadow: 0 0 0 2px #ff8e41;
+  }
+`;
+
+export const DepartureCity = Input.extend`
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
   @media (min-width: 768px) {
     border-top-right-radius: 0px;
@@ -150,21 +159,7 @@ export const DepartureCity = styled.input`
   }
 `;
 
-export const ArrivalCity = styled.input`
-  width: 100%;
-  outline: none;
-  border: none;
-
-  padding: 18px 0px 18px 16px;
-  margin-bottom: 2px;
-
-  line-height: 20px;
-  font-size: 16px;
-
-  ::placeholder: {
-    color: #a0b0b9;
-  }
-
+export const ArrivalCity = Input.extend`
   @media (min-width: 768px) {
     margin-left: 2px;
     border-top-right-radius: 3px;
@@ -177,16 +172,8 @@ export const ArrivalCity = styled.input`
   }
 `;
 
-export const DepartureDate = styled.input`
-  width: 100%;
-  outline: none;
-  border: none;
-
-  padding: 18px 0px 18px 16px;
+export const DepartureDate = Input.extend`
   margin-right: 1px;
-
-  line-height: 20px;
-  font-size: 16px;
 
   @media (min-width: 768px) {
     border-bottom-left-radius: 3px;
@@ -197,22 +184,13 @@ export const DepartureDate = styled.input`
   }
 `;
 
-export const ReturnDate = styled.input`
-  width: 100%;
-  outline: none;
-  border: none;
-
-  padding: 18px 0px 18px 16px;
+export const ReturnDate = Input.extend`
   margin-left: 1px;
-
-  line-height: 20px;
-  font-size: 16px;
 `;
 
 export const TravelDates = styled.div`
   display: flex;
   width: 100%;
-  margin-bottom: 2px;
 
   @media (min-width: 1200px) {
     flex-basis: 100%;
@@ -237,6 +215,12 @@ export const PassengerNumberSelect = styled.button`
   line-height: 20px;
   font-size: 16px;
   text-align: left;
+
+  transition: all 0.3s;
+
+  &:focus {
+    box-shadow: 0 0 0 2px #ff8e41;
+  }
 
   @media (min-width: 768px) {
     margin-bottom: 2px;
@@ -271,6 +255,23 @@ export const FindTickets = styled.button`
   color: white;
   font-size: 24px;
   line-height: 28px;
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #ffa353;
+    box-shadow: 0 1px 0 0 #bc5f10, inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    box-shadow: 0 1px 0 0 #bc5f10, inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+  }
+
+  &:active {
+    background: #ed7a18;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.27), inset 0 1px 0 0 #bc5f10;
+  }
 
   @media (min-width: 768px) {
     width: auto;

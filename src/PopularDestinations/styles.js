@@ -61,6 +61,12 @@ export const ChosenCity = styled.span`
   color: #00ace2;
   display: block;
 
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #ff8b00;
+  }
+
   @media (min-width: 768px) {
     display: inline;
     font-size: 24px;

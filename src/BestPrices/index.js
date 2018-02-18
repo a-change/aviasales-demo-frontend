@@ -1,7 +1,7 @@
 import React from "react";
 import calendar from "./calendar.svg";
 import { BestPrices, Title, Text, Note } from "./styles";
-import BestPrice from "./best-price";
+import { BestPrice } from "./best-price";
 import { destinations } from "../PopularDestinations/options";
 export default function() {
   return (

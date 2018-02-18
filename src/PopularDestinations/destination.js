@@ -3,20 +3,6 @@ import styled from "styled-components";
 import Geo from "./geo";
 import Money from "./money";
 
-const Card = styled.div`
-  border-radius: 8px;
-  background: white;
-  margin-bottom: 12px;
-
-  @media (min-width: 768px) {
-    margin-bottom: 25px;
-  }
-
-  @media (min-width: 1200px) {
-    margin-bottom: 32px;
-  }
-`;
-
 const Info = styled.div`
   display: flex;
   justify-content: space-between;
@@ -61,6 +47,26 @@ const Image = styled.img`
 const Link = styled.a`
   border-radius: inherit;
   text-decoration: none;
+`;
+
+const Card = styled.div`
+  border-radius: 8px;
+  background: white;
+  margin-bottom: 12px;
+
+  transition: all 0.3s;
+
+  &:hover {
+    box-shadow: 0 10px 20px 0 rgba(91, 137, 163, 0.2);
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 32px;
+  }
 `;
 
 export default props => {

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Geo from "../PopularDestinations/geo";
 import Money from "../PopularDestinations/money";
 
-const BestPrice = styled.div`
+const BestPriceElement = styled.div`
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: ${props => (props.noBorder ? "none" : "1px #AFBEC6 dashed")};
@@ -43,8 +43,8 @@ const DepartureCity = styled.span`
   }
 `;
 
-export default props => {
-  var listPrices = props.destination.prices.map(function(price, key) {
+export function BestPrice(props) {
+  var listPrices = props.destination.prices.map(function(price) {
     return (
       <PriceRow key={price.name} href="#">
         <DepartureCity>Из {price.from}</DepartureCity>
@@ -54,9 +54,9 @@ export default props => {
   });
 
   return (
-    <BestPrice noBorder={props.noBorder}>
+    <BestPriceElement noBorder={props.noBorder}>
       <Geo destination={props.destination} />
       <PricesList>{listPrices}</PricesList>
-    </BestPrice>
+    </BestPriceElement>
   );
-};
+}

@@ -25,9 +25,11 @@ const Wording = styled.span`
 
   &:hover {
     color: ${props => (props.popularDestinations ? "inherit" : "#ff9d1b")};
+  }
 `;
 
-const FormatMoney = props => {
+const FormatMoney = function(props) {
+  if (props.price === undefined) return null;
   let price = props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   return (
     <Money>
